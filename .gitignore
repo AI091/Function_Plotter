@@ -1,4 +1,4 @@
 *.pyc
 *.cfg
 /venv
-test.py
+trying_gui.py
