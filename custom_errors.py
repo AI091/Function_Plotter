@@ -12,3 +12,7 @@ class DivisionByZero(Exception):
 
 class EmptyInput(Exception):
     pass
+
+
+class minMaxError(Exception):
+    pass
