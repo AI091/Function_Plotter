@@ -2,3 +2,4 @@
 *.cfg
 /venv
 trying_gui.py
+.sourcery.yaml

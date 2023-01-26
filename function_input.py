@@ -12,7 +12,33 @@ from PySide2.QtCore import Qt
 
 
 class FunctionInput(QWidget):
+    """
+    A widget to get function input from the user 
+
+    ...
+
+    Attributes
+    ----------
+    label : QLabel
+        label to show the user what to do
+    input_dialog : QLineEdit
+        input dialog to get the function from the user
+    plot_button : QPushButton
+        button to plot the function when pressed
+    min_x_label : QLabel
+        label to show the user what to do
+    min_x_input : QDoubleSpinBox
+        input dialog to get the minimum value of the x-axis from the user
+    max_x_label : QLabel
+        label to show the user what to do
+    max_x_input : QDoubleSpinBox
+        input dialog to get the maximum value of the x-axis from the user
+    
+    """
     def __init__(self) -> None:
+        """
+        Constructs all the necessary attributes for the FunctionInput object .
+        """
         super().__init__()
 
         self.min_x = 1

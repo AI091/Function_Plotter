@@ -23,12 +23,37 @@ from custom_errors import (
 )
 from function_input import FunctionInput
 
-from helper import parse_input  # Import the function from helper.py
+from helper import parse_input  
 from canvas import PlotCanvas
 from helper import CORRECT_INPUT_PROMPT
 
 
 class MainWindow(QMainWindow):
+    """
+    Main window of the application
+    
+    ...
+
+    Attributes
+    ----------
+    input_function : FunctionInput
+        input widget for the function
+    plot_button : QPushButton
+        button to plot the function when pressed
+    canvas : PlotCanvas
+        matplotlib canvas to plot the function
+    tool_bar : NavigationToolbar
+        matplotlib toolbar to add zooming and panning functionality
+    last_alert : str
+        holds the last alert message if any
+    
+    Methods
+    -------
+    alert(message):
+        shows a warning message box with the given message
+    plot():
+        plots the function on the canvas
+    """
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Plotter")
