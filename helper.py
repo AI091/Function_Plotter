@@ -6,7 +6,7 @@ from custom_errors import (
 )
 
 CORRECT_INPUT_PROMPT = 'Please enter a valid function of "x". \nsupported operands are  + - / * ^ \nex: x^2 + 2*x + 1'
-allowed_operands = {"+", "-", " ", "/", "*", "^"}
+allowed_operands = {"+", "-", " ", "/", "*", "^", "(", ")"}
 
 
 def check_operands(user_input):
