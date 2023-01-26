@@ -13,7 +13,7 @@ from PySide2.QtCore import Qt
 
 class FunctionInput(QWidget):
     """
-    A widget to get function input from the user 
+    A widget to get function input from the user
 
     ...
 
@@ -33,8 +33,9 @@ class FunctionInput(QWidget):
         label to show the user what to do
     max_x_input : QDoubleSpinBox
         input dialog to get the maximum value of the x-axis from the user
-    
+
     """
+
     def __init__(self) -> None:
         """
         Constructs all the necessary attributes for the FunctionInput object .

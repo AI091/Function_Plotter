@@ -23,7 +23,7 @@ from custom_errors import (
 )
 from function_input import FunctionInput
 
-from helper import parse_input  
+from helper import parse_input
 from canvas import PlotCanvas
 from helper import CORRECT_INPUT_PROMPT
 
@@ -31,7 +31,7 @@ from helper import CORRECT_INPUT_PROMPT
 class MainWindow(QMainWindow):
     """
     Main window of the application
-    
+
     ...
 
     Attributes
@@ -46,7 +46,7 @@ class MainWindow(QMainWindow):
         matplotlib toolbar to add zooming and panning functionality
     last_alert : str
         holds the last alert message if any
-    
+
     Methods
     -------
     alert(message):
@@ -54,6 +54,7 @@ class MainWindow(QMainWindow):
     plot():
         plots the function on the canvas
     """
+
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Plotter")
@@ -71,7 +72,7 @@ class MainWindow(QMainWindow):
         widget.setLayout(layout)
         self.setCentralWidget(widget)
 
-        self.last_alert = None  
+        self.last_alert = None
 
     def alert(self, message):
         self.last_alert = message
@@ -108,6 +109,7 @@ class MainWindow(QMainWindow):
         except Exception as error:
             self.alert(str(error))
             return
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -15,7 +15,7 @@ def plotter(qtbot):
 
 def test_working_function(qtbot, plotter):
     """
-    Test to check if the function (x^2) is plotted correctly on correct input and min max range 
+    Test to check if the function (x^2) is plotted correctly on correct input and min max range
     and the title is set correctly.
     """
     qtbot.addWidget(plotter)
@@ -97,6 +97,7 @@ def test_min_input_working(qtbot, plotter):
     plotter.input_function.min_x_input.setValue(-10)
     assert plotter.input_function.min_x_input.value() == -10
 
+
 def test_min_step_up_working(qtbot, plotter):
     """
     Test to check if the min input step up is working correctly
@@ -104,7 +105,8 @@ def test_min_step_up_working(qtbot, plotter):
     qtbot.addWidget(plotter)
     plotter.input_function.min_x_input.setValue(0)
     plotter.input_function.min_x_input.stepBy(1)
-    assert plotter.input_function.min_x_input.value() == 0.1 
+    assert plotter.input_function.min_x_input.value() == 0.1
+
 
 def test_min_step_down_working(qtbot, plotter):
     """
@@ -124,6 +126,7 @@ def test_max_input_working(qtbot, plotter):
     plotter.input_function.max_x_input.setValue(10)
     assert plotter.input_function.max_x_input.value() == 10
 
+
 def test_max_step_up_working(qtbot, plotter):
     """
     Test to check if the max input step up is working correctly
@@ -133,6 +136,7 @@ def test_max_step_up_working(qtbot, plotter):
     plotter.input_function.max_x_input.stepBy(1)
     assert plotter.input_function.max_x_input.value() == 0.1
 
+
 def test_max_step_down_working(qtbot, plotter):
     """
     Test to check if the max input step down is working correctly
@@ -141,6 +145,7 @@ def test_max_step_down_working(qtbot, plotter):
     plotter.input_function.max_x_input.setValue(0)
     plotter.input_function.max_x_input.stepBy(-1)
     assert plotter.input_function.max_x_input.value() == -0.1
+
 
 def test_plot_button_working(qtbot, plotter):
     """
@@ -160,4 +165,3 @@ def test_window_title(qtbot, plotter):
     """
     qtbot.addWidget(plotter)
     assert plotter.windowTitle() == "Plotter"
-
