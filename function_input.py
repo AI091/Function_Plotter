@@ -53,13 +53,8 @@ class FunctionInput(QWidget):
 
         input_layout = QHBoxLayout()
         self.input_dialog = QLineEdit()
-        self.input_dialog.setStyleSheet(
-            ":focus{border: 2px solid #333; }*{padding: 5px;}"
-        )
+
         self.plot_button = QPushButton("Plot")
-        self.plot_button.setStyleSheet(
-            ":hover{background-color: #030303; color: #fff;}*{height:21px;background-color: #333; color: #fff;}"
-        )
 
         self.min_x_label = QLabel("Min X")
         self.min_x_input = QDoubleSpinBox()
@@ -109,3 +104,13 @@ class FunctionInput(QWidget):
         layout.setAlignment(Qt.AlignCenter)
 
         self.setLayout(layout)
+
+        self.input_dialog.setPlaceholderText("Enter your function here")
+
+        self.plot_button.setStyleSheet(
+            ":hover{background-color: #030303; color: #fff;}*{height:21px;background-color: #333; color: #fff;}"
+        )
+
+        self.input_dialog.setStyleSheet(
+            ":focus{border: 2px solid #333; }*{padding: 5px;}"
+        )
